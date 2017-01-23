@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
   <title>Document</title>
 </head>
 <body>
@@ -21,7 +22,8 @@
   <div class="mainContainer">
     <div class="contentContainer">
 
-      <h1 id="tst">Recent Blog Posts</h1>
+      <h1 class="shadowHeader">Recent Blog Posts</h1>
+      <a href="/blog/create"><h1 class="shadowHeader" style="float:right"><i class="fa fa-pencil" aria-hidden="true"></i>Create New Post</h1></a>
 
 
         <% for(var i= 0;i<posts.length;i++){ %>

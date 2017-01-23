@@ -18,12 +18,22 @@
       </div>
   </div>
   <div class="mainContainer">
-    <form action="/blog/create" method="post">
-      <label for="title">Title</label>
-      <input type="text" name="title" value="">
-      <textarea name="body" rows="8" cols="80"></textarea>
-      <input type="submit" name="" value="Create New Post">
-    </form>
+    <div class="contentContainer">
+      <h1 class="shadowHeader">Create New Post</h1>
+      <div id="createPostForm">
+        <div class="center">
+          <form action="/blog/create" method="post">
+            <label for="title">Title</label>
+            <input type="text" name="title" value="">
+            <textarea name="body" rows="20" cols="80"></textarea>
+            <input type="submit" name="" value="Create New Post">
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+
   </div>
 
 </body>
