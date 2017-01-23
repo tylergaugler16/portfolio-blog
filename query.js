@@ -1,5 +1,6 @@
 var pg = require('pg');
-var connectionString = 'postgres://' + process.env.POSTGRES_USER + ':' + process.env.POSTGRES_PASSWORD + '@localhost/blog';
+// var connectionString = 'postgres://' + process.env.POSTGRES_USER + ':' + process.env.POSTGRES_PASSWORD + '@localhost/blog';
+var connectionString = process.env.DATABASE_URL;
 
 module.exports = function(queryString, queryParameters, onComplete) {
   if (typeof queryParameters == 'function') {
