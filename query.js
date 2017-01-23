@@ -1,6 +1,7 @@
 var pg = require('pg');
-// var connectionString = 'postgres://' + process.env.POSTGRES_USER + ':' + process.env.POSTGRES_PASSWORD + '@localhost/blog';
-var connectionString = process.env.DATABASE_URL;
+
+// allows connectionString to use heroku db or local db
+var connectionString = process.env.DATABASE_URL || 'postgres://' + process.env.POSTGRES_USER + ':' + process.env.POSTGRES_PASSWORD + '@localhost/blog' ;
 
 module.exports = function(queryString, queryParameters, onComplete) {
   if (typeof queryParameters == 'function') {
