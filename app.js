@@ -11,18 +11,15 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static("/"));
 app.use("/js", express.static(__dirname + '/js'));
 app.use("/css", express.static(__dirname + '/css'));
-
+app.use("/resources", express.static(__dirname + '/resources'));
+app.use("/font-awesome", express.static(__dirname + '/font-awesome'));
 
 app.get("/blog", function(req, res){
     query('select * from posts', function(err, result){
       res.render('blog', {posts: result.rows} );
     });
 });
-app.get("/blog/:id", function(req, res){
-  query('select * from posts where id = $1', [req.params.id], function(err,result){
-      res.render('post', {post: result.rows[0]});
-  });
-});
+
 app.get("/blog/delete/:id", function(req, res){
   query('delete from posts where id = $1',[req.params.id], function(err, result){
       res.redirect("/blog");
@@ -33,9 +30,14 @@ app.get("/blog/create", function(req, res){
 });
 app.post("/blog/create", function(req, res){
   console.log(req.body.title);
-    query(`insert into posts(title, body) values('${req.body.title}', '${req.body.body}')`, function(err, result){
+    query(`insert into posts(title, body) values('${req.body.title.replace("'","''")}', '${req.body.body.replace("'","''")}')`, function(err, result){
       res.redirect("/blog");
     });
+});
+app.get("/blog/:id", function(req, res){
+  query('select * from posts where id = $1', [req.params.id], function(err,result){
+      res.render('post', {post: result.rows[0]});
+  });
 });
 app.get("/", function(req, res){
   res.render("portfolio");

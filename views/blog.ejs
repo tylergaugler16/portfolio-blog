@@ -19,15 +19,31 @@
 
   </div>
   <div class="mainContainer">
-    <h1 id="tst">Holla at ya boi</h1>
+    <div class="contentContainer">
 
-    <ul>
-      <% for(var i= 0;i<posts.length;i++){ %>
-        <li><%= posts[i].id %> </li>
-      <% } %>
-    </ul>
+      <h1 id="tst">Recent Blog Posts</h1>
+
+
+        <% for(var i= 0;i<posts.length;i++){ %>
+          <div class="articleContainer">
+            <div class="articleTitle">
+               <a href="/blog/<%=posts[i].id%>"><h2> <%= posts[i].title %> </h2></a>
+            </div>
+            <div class="articleContent">
+               <span class="content"> <%= posts[i].body %> </span>
+            </div>
+          </div>
+        <% } %>
+
+    </div>
+
 
   </div>
-
+<script>
+  var $content =  document.getElementsByClassName('content');
+  for(var i=0;i< $content.length;i++){
+    $content[i].innerHTML =  $content[i].innerHTML.split(".",5).join(".")+"...";
+  }
+</script>
 </body>
 </html>
