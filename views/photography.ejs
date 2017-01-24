@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/css/style.css">
+  <link type="text/css" rel="stylesheet" href="/lightgallery/css/lightgallery.min.css" />
+  <title>Photography</title>
+</head>
+<body>
+  <div id="mainHeader">
+      <h1 id="nameHeader">Tyler Gaugler</h1>
+      <div id="links">
+        <ul>
+          <li><a href="/">HOME</a></li>
+          <li><a href="/blog">BLOG</a></li>
+        </ul>
+      </div>
+
+  </div>
+  <div class="mainContainer">
+      <div class="contentContainer">
+        <div id="aniimated-thumbnials">
+          <a href="/resources/church.png">
+              <img src="resources/church.png" />
+          </a>
+          <a href="/resources/pic2.jpg">
+              <img src="resources/pic2.jpg" />
+          </a>
+          <a href="/resources/pic3.jpg">
+              <img src="resources/pic3.jpg" />
+          </a>
+          <a href="/resources/pic4.jpg">
+              <img src="resources/pic4.jpg" />
+          </a>
+      </div>
+
+      </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="/lightgallery/js/lightgallery.min.js"></script>
+
+  <script src="/lightgallery/js/lg-thumbnail.min.js"></script>
+  <script src="/lightgallery/js/lg-fullscreen.min.js"></script>
+
+  <script type="text/javascript">
+  $('#aniimated-thumbnials').lightGallery({
+    thumbnail:true,
+    animateThumb: false,
+    showThumbByDefault: false,
+
+});
+</script>
+</body>
+</html>

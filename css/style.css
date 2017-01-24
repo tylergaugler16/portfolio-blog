@@ -73,6 +73,7 @@ a:visited{
 .contentContainer{
   width:80%;
   margin:0 auto;
+
 }
 
 .projectContainer{
@@ -80,7 +81,7 @@ a:visited{
   margin:25px 0 35px 0;
   height:250px;
   background-color: yellow;
-  border:2px solid black;
+  /*border:2px solid black;*/
 }
 .projectHeader{
   display: inline-block;
@@ -116,12 +117,39 @@ a:visited{
   margin: 0;
   background-color: black;
   float:left;
+  /*position: absolute;*/
+
 }
 .projectDescription img{
   height:100%;
   width:auto;
   display:block;
-  margin:0 auto;
+  position: absolute;
+  left:50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+.skillOverlay{
+  margin: 0 auto;
+  height:100%;
+  width:auto;
+  /*background-color: blue;*/
+  position: relative;
+  z-index: 1;
+}
+.overlay{
+  position: absolute;
+  width: 100%;
+  height:100%;
+  background-color: rgba(0,0,0,0.6);
+  z-index: 3;
+}
+.individualProjectSkills{
+  width:70%;
+  position: absolute;
+  left:50%;
+  top:50%;
+  transform: translate(-50%, -50%);
 }
 .fullWidthContainer{
   width:100%;
@@ -150,15 +178,16 @@ a:visited{
 #skillHeader, #skillDesc{
   color:#708090;
   margin-left: 25px;
-
 }
-/*blog page*/
 
+
+/*blog page*/
 .articleContainer{
   width:100%;
   height:300px;
-  background-color:#708090;
-
+  /*background-color:#708090;*/
+  background-color: white;
+  color:#708090;
   margin: 30px 0;
   overflow: hidden;
 
@@ -168,6 +197,11 @@ a:visited{
   height:auto;
   text-align: center;
   padding-top: 1px;
+
+}
+.articleTitle h2{
+  color: #708090;
+  text-decoration: underline;
 }
 .articleContent{
   width:70%;
@@ -181,19 +215,27 @@ a:visited{
 
 /*post page*/
 #deleteButton{
-  margin-top:20px;
+  margin:25px 0;
   display:block;
   border:2px solid red;
   text-align: center;
   background-color:red;
 }
 
-.postTitle{
-
+.postHeader{
+  text-align: center;
+  padding:5px;
+  background-color: rgba(0,0,0,0.1);
+  text-transform: capitalize;
+  margin-top: 25px;
+}
+.postHeader h2{
+  margin:0;
+  text-shadow: 2px 2px 4px #000000;
 }
 .postBody{
   background-color: #708090;
-  margin-top: 25px;
+  /*margin-top: 25px;*/
   padding: 25px;
 }
 
@@ -212,4 +254,11 @@ a:visited{
 #createPostForm form{
   display:block;
   margin:0 auto;
+}
+
+
+/*photography */
+#aniimated-thumbnials img{
+  height:200px;
+  width:auto;
 }

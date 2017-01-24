@@ -13,6 +13,7 @@ app.use("/js", express.static(__dirname + '/js'));
 app.use("/css", express.static(__dirname + '/css'));
 app.use("/resources", express.static(__dirname + '/resources'));
 app.use("/font-awesome", express.static(__dirname + '/font-awesome'));
+app.use("/lightgallery", express.static(__dirname + '/lightgallery'));
 
 app.get("/blog", function(req, res){
     query('select * from posts', function(err, result){
@@ -39,8 +40,16 @@ app.get("/blog/:id", function(req, res){
       res.render('post', {post: result.rows[0]});
   });
 });
+
+app.get("/photography", function(req, res){
+  res.render("photography");
+});
 app.get("/", function(req, res){
   res.render("portfolio");
+});
+
+app.get("/*", function(req, res){
+  res.render('page_not_found');
 });
 
 app.listen(process.env.PORT || 3000, function(){

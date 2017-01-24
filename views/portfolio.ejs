@@ -25,7 +25,7 @@
           <div class="projectContainer">
               <div class="projectHeader">
                 <div class="infoContainer">
-                  <h1 class="projectTitle">YouNote</h1>
+                  <h1 class="projectTitle"><a href="https://younote.herokuapp.com/" target="_blank">YouNote</a></h1>
                   <span>
                     YouNote is web app built with Rails that allows user to search for videos, take notes, and save them for later.
                   </span>
@@ -33,14 +33,28 @@
                 </div>
               </div>
               <div class="projectDescription">
-                  <a href="https://younote.herokuapp.com/" target="_blank"><img src="/resources/younote.png" alt=""></a>
+                <div class="skillOverlay">
+                  <img src="/resources/younote.png" alt="">
+                  <div class="overlay" style="display:none">
+                    <div class="individualProjectSkills">
+                      <div class="skill">Ruby on Rails</div>
+                      <div class="skill">HTML/CSS</div>
+                      <div class="skill">Sass</div>
+                      <div class="skill">Bootstrap</div>
+                      <div class="skill">Git</div>
+                      <div class="skill">Heroku</div>
+                    </div>
+
+                  </div>
+                </div>
+
               </div>
           </div> <!-- project container -->
 
           <div class="projectContainer">
               <div class="projectHeader">
                 <div class="infoContainer">
-                <a href="https://maspethbiblechurch.com/" target="_blank">  <h1 class="projectTitle">Maspeth Bible Church</h1></a>
+                <a href="http://maspethbiblechurch.com/" target="_blank">  <h1 class="projectTitle">Maspeth Bible Church</h1></a>
                   <span>
                     Individually developed and designed a website for the church I attend, Maspeth Bible Church, using HTML/CSS and Bootstrap. The site is still maintained and is in need of constant updating.
                   </span>
@@ -49,8 +63,18 @@
               </div>
               <div class="projectDescription">
 
+                  <div class="skillOverlay">
+                      <a href="http://maspethbiblechurch.com/" target="_blank"><img src="/resources/church.png" alt=""></a>
+                      <div class="overlay" style="display:none">
+                        <div class="individualProjectSkills">
+                          <div class="skill">HTML/CSS</div>
+                          <div class="skill">JavaScript</div>
+                          <div class="skill">JQuery</div>
+                          <div class="skill">FTP</div>
+                        </div>
+                      </div>
+                  </div>
 
-                  <a href="http://maspethbiblechurch.com/" target="_blank"><img src="/resources/church.png" alt=""></a>
 
               </div>
           </div> <!-- project container -->
@@ -67,8 +91,15 @@
               </div>
               <div class="projectDescription">
 
-                <img src="/resources/gtmetrix.png" alt="">
-
+                <div class="skillOverlay">
+                  <img src="/resources/gtmetrix.png" alt="">
+                  <div class="overlay" style="display:none">
+                    <div class="individualProjectSkills">
+                      <div class="skill">HTML/CSS</div>
+                      <div class="skill">JavaScript</div>
+                    </div>
+                  </div>
+                </div>
               </div>
           </div> <!-- project container -->
 
@@ -88,7 +119,6 @@
       <div class="skill">C++</div>
       <div class="skill">JavaScript</div>
       <div class="skill">JQuery</div>
-      <div class="skill">Git</div>
       <div class="skill">Perl</div>
       <div class="skill">Postgres</div>
       <div class="skill">Heroku</div>
@@ -101,7 +131,7 @@
   </div>
   </div> <!-- main container -->
 
-
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="/js/portfolio_script.js" charset="utf-8"></script>
 </body>
 </html>
