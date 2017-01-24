@@ -33,39 +33,53 @@ a:visited{
 
 #mainHeader{
   width: 100%;
-  height: 80px;
+  height: 800px;
   top:0;
   left:0;
   right:0;
   /*background-color: 	#708090;*/
   background: linear-gradient(to left, #708090 , #a9b2bc);
-  position: absolute;
+  /*position: absolute;*/
   margin-bottom: 25px;
 }
-#links{
+#navigation{
+  margin-top: 20px;
   display:inline-block;
   float:right;
   position: absolute;
-  top:50%;
   right:50px;
-  transform: translate(0,-50%);
 }
 #mainHeader h1{
   display: inline-block;
   width:50%;
   padding-left:50px
 }
-#mainHeader ul{
+#navigation ul{
   float:right;
   list-style-type: none;
 }
-#mainHeader ul li{
+#navigation ul li{
+  display: inline-block;
+  margin: 0 25px;
+}
+#links{
+  display: block;
+  position: absolute;
+  /*top:70%;
+  left:50%;*/
+  transform: translate(-50%,-50%);
+}
+#links ul{
+  float: left;
+  list-style: none;
+}
+#links ul li{
   display: inline-block;
   margin: 0 25px;
 }
 
 .mainContainer{
-  margin-top: 100px;
+  margin-top: 25px;
 }
 
 /*portfolio page*/
