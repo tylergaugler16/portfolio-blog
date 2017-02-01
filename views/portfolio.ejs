@@ -6,38 +6,45 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
-  <link rel="stylesheet" href="/css/animsition.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="/css/animsition.min.css"> -->
   <title>Tyler Gaugler</title>
 </head>
 <body>
   <div class="animsition-overlay">
 
 
-  <div id="mainHeader">
-      <h1 id="nameHeader">Tyler Gaugler</h1>
+  <div id="mainHeader" class="triangle back1">
+
       <div id="navigation" >
+        <h1 id="nameHeader">Tyler Gaugler</h1>
+        <div id="navigationList">
+          <ul>
+              <li><a href="/" class="animsition-link">HOME</a></li>
+              <li><a href="/blog" class="animsition-link">BLOG</a></li>
+              <li><a href="/photography" class="animsition-link">PHOTOGRAPHY</a></li>
 
-        <ul>
-            <li><a href="/" class="animsition-link">HOME</a></li>
-            <li><a href="/blog" class="animsition-link">BLOG</a></li>
-            <li><a href="/photography" class="animsition-link">PHOTOGRAPHY</a></li>
+          </ul>
 
-        </ul>
+        </div>
+
 
       </div>
-      <div id="links">
+      <!-- <div id="links">
         <ul>
           <li><a href="#">Projects</a></li>
           <li><a href="#">Skills</a></li>
           <li><a href="#">Bio</a></li>
         </ul>
-      </div>
+      </div> -->
+
+      <div id="arrow"><a href="#"><i class="fa fa-angle-double-down fa-5x" aria-hidden="true"></a></i></div>
 
   </div>
   <div class="mainContainer" >
 
       <div class="contentContainer">
-        <h1 class="shadowHeader">This is my portfolio!</h1>
+        <h1 class="shadowHeader">Projects I Have Word On</h1>
           <div class="projectContainer">
               <div class="projectHeader">
                 <div class="infoContainer">
@@ -152,35 +159,43 @@
 
       </div> <!-- content container -->
 
-  <div class="fullWidthContainer">
-    <h1 id="skillHeader">Skills</h1>
-    <span id="skillDesc">Some of the languages/frameworks/libraries/tools I have had exposure to: </span>
-    <div class="skillsContainer">
-      <div class="skill">Ruby on Rails</div>
-      <div class="skill">Ruby</div>
-      <div class="skill">HTML/CSS</div>
-      <div class="skill">Node.js</div>
-      <div class="skill">Express</div>
-      <div class="skill">Git</div>
-      <div class="skill">Java</div>
-      <div class="skill">C++</div>
-      <div class="skill">JavaScript</div>
-      <div class="skill">JQuery</div>
-      <div class="skill">Perl</div>
-      <div class="skill">Postgres</div>
-      <div class="skill">Heroku</div>
-      <div class="skill">Sass</div>
-      <div class="skill">Bootstrap</div>
-      <div class="skill">Grunt</div>
-      <div class="skill">MVC</div>
-      <div class="skill">FTP</div>
-      <div class="skill">AJAX</div>
+    <div class="fullWidthContainer">
+      <h1 id="skillHeader">Skills</h1>
+      <span id="skillDesc">Some of the languages/frameworks/libraries/tools I have had exposure to: </span>
+      <div class="skillsContainer">
+        <div class="skill">Ruby on Rails</div>
+        <div class="skill">Ruby</div>
+        <div class="skill">HTML/CSS</div>
+        <div class="skill">Node.js</div>
+        <div class="skill">Express</div>
+        <div class="skill">Git</div>
+        <div class="skill">Java</div>
+        <div class="skill">C++</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">JQuery</div>
+        <div class="skill">Perl</div>
+        <div class="skill">Postgres</div>
+        <div class="skill">Heroku</div>
+        <div class="skill">Sass</div>
+        <div class="skill">Bootstrap</div>
+        <div class="skill">Grunt</div>
+        <div class="skill">MVC</div>
+        <div class="skill">FTP</div>
+        <div class="skill">AJAX</div>
+      </div>
     </div>
-  </div>
+    <div class="fullWidthContainer" id="aboutMe">
+      <h1>About Me</h1>
+      <div id="myBio">
+        <span>
+          Hey! I'm a student at Queens College studying computer science, looking for employment as a fullstack web developer. I am a follower of Jesus Christ! I enjoy helping out with the kids program every friday afternoon, ocassionally leading bible studies, and playing the drums at the church I attend. I love playing sports such as football, volleyball, bike riding, and rock climbing. If you have any questions for me or would like to get in contact, send me message via the form below.
+        </span>
+      </div>
+    </div>
   </div> <!-- main container -->
   </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<script src="/js/animsition.min.js" charset="utf-8"></script>
+<!-- <script src="/js/animsition.min.js" charset="utf-8"></script> -->
 <script src="/js/portfolio_script.js" charset="utf-8"></script>
 </body>
 </html>
