@@ -9,8 +9,8 @@ $(document).ready(function(){
 
       inClass: 'overlay-slide-in-right',
       outClass: 'overlay-slide-out-right',
-      inDuration: 800,
-      outDuration: 800,
+      inDuration: 1000,
+      outDuration: 1000,
       linkElement: '.animsition-link',
       // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
       loading: true,
