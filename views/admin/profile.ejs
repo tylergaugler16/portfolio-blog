@@ -7,9 +7,14 @@
   <title>Document</title>
 </head>
 <body>
-  <% if (user){ %>
-  <h1><%= user.name %> </h1>
-  <% } %>
+  <h1><%= saved_user.name %> </h1>
+  <% if (typeof user != 'undefined' && saved_user.id == user.id){ %>
+    <a href="/admin/logout">log out</a>
+  <% } else { %>
+
+  <%  }%>
+
+
 
 </body>
 </html>

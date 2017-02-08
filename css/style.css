@@ -358,3 +358,13 @@ a:visited{
 #picturesContainer{
     text-align: center;
 }
+
+
+/*page not found*/
+#notFound{
+  display: block;
+  position: absolute;;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+}

@@ -25,6 +25,26 @@ app.use(session({
   secure: true,
   ephemeral: true
 }));
+app.use(function(req, res, next) {
+  if (req.session && req.session.user) {
+    console.log("we have a session!");
+    query('select * from admins where email=$1',[req.session.user.email], function(err, user) {
+      if (user.rows[0]) {
+        req.user = user.rows[0];
+        delete req.user.password; // delete the password from the session
+        req.session.user = user.rows[0];  //refresh the session value
+        res.locals.user = user.rows[0]; // local allws user to be accessed in view
+      }
+      else{
+        res.locals.user = null;
+      }
+      // finishing processing the middleware and run the route
+      next();
+    });
+  } else {
+    next();
+  }
+});
 
 app.get('/admin/signup', function(req, res){
   res.render("admin/signup");
@@ -36,6 +56,7 @@ app.post('/admin/signup', function(req, res){
   query(`insert into admins(name, password, email) values('${req.body.name}', '${generatedPass}','${req.body.email}') returning *`, function(err, result){
     if(err){
       console.log(err);
+      res.redirect('/admin/signup', {flash_message: err});
     }
     else{
       res.redirect('/admin/login');
@@ -44,10 +65,12 @@ app.post('/admin/signup', function(req, res){
 });
 
   app.get('/admin/login', function(req, res){
+    console.log('get login');
     res.render('admin/login');
   });
 
   app.post('/admin/login', function(req, res){
+    console.log("post login");
     query('select * from admins where email=$1',[req.body.email], function(err, result){
       if(err){
         console.log(err);
@@ -59,12 +82,16 @@ app.post('/admin/signup', function(req, res){
       }
       else{
         console.log(result.rows[0].password);
-        console.log(userPassword);
         console.log("could not log in");
+        res.redirect('/admin/login');
       }
     });
   });
-
+  app.get('/admin/logout',function(req, res){
+    req.session.reset();
+    console.log('session destroyed');
+    res.redirect('/admin/login');
+  });
 
 
 
@@ -74,7 +101,12 @@ app.get('/admin/:id', function(req, res){
       console.log(err);
     }
     else{
-      res.render('admin/profile', {user: result.rows[0]});
+      if((req.session && req.session.user) && req.session.user.id == result.rows[0].id){
+        res.render('admin/profile', {saved_user: result.rows[0]});
+      }
+      else{
+        res.render('page_not_found');
+      }
     }
   });
 });
@@ -118,23 +150,7 @@ app.get("/*", function(req, res){
 });
 
 
-app.use(function(req, res, next) {
-  if (req.session && req.session.user) {
-    console.log("we have a session!");
-    query('select * from admins where email=$1',[req.session.user.email], function(err, user) {
-      if (user.rows[0]) {
-        req.user = user.rows[0];
-        delete req.user.password; // delete the password from the session
-        req.session.user = user.rows[0];  //refresh the session value
-        res.locals.user = user.rows[0]; // local allws user to be accessed in view
-      }
-      // finishing processing the middleware and run the route
-      next();
-    });
-  } else {
-    next();
-  }
-});
+
 function requireLogin (req, res, next) {
   if (!req.user) {
     res.redirect('/login');
