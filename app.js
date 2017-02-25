@@ -142,7 +142,10 @@ app.get("/photography", function(req, res){
   res.render("photography");
 });
 app.get("/", function(req, res){
-  res.render("portfolio");
+  res.render("index");
+});
+app.get("/home", function(req, res){
+  res.render("index");
 });
 
 app.get("/*", function(req, res){
