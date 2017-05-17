@@ -600,7 +600,9 @@ color:#B2B2B2;
   #skillDesc{
     font-size: 0.9em;
   }
-
+  .skills{
+    padding-top:15px;
+  }
 }
 @media(max-width: 440px){
   .projectImageContainer{
@@ -620,5 +622,8 @@ color:#B2B2B2;
   }
   .skill{
     font-size: 0.8em;
+  }
+  #mainHeader::after {
+    margin-top: -129px;
   }
 }
