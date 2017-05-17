@@ -603,6 +603,16 @@ color:#B2B2B2;
   .skills{
     padding-top:15px;
   }
+  .projectHeader{
+    width:100%;
+  }
+  .projectDescription{
+    top: 30%;
+  }
+  .projectImageContainer{
+    top: 70%;
+  }
+
 }
 @media(max-width: 440px){
   .projectImageContainer{
@@ -626,4 +636,8 @@ color:#B2B2B2;
   #mainHeader::after {
     margin-top: -129px;
   }
+  #mainHeader::before {
+    margin-top: -128px;
+  }
+
 }
