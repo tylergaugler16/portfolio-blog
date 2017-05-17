@@ -10,6 +10,11 @@ html, body{
   margin:0;
   padding:0;
 }
+@font-face {
+    font-family: League-Spartan;
+    font-weight: bold;
+    src: url("fonts/LeagueSpartan-Bold.otf") format("opentype");
+}
 a{
   text-decoration: none;
   color:white;
@@ -116,11 +121,16 @@ a:visited{
   padding:5px;
   border-radius: 5px;
 }
+.skills{
+  margin:0 auto;
+  width:90%;
+}
 #skillHeader, #skillDesc{
   color:white;
-  margin-left: 25px;
+  /*margin-left: 25px;*/
   margin-top:0;
 }
+
 #aboutMe{
   background-color: #516e8b;
   height:600px;
@@ -261,14 +271,24 @@ a:visited{
 #mainHeader::before{
   width:30%;
   position: absolute;
-  height:100px;
+  height:160px;
   content:'';
   display:block;
   background-color:#0099CC;
   transform: skewY(30deg);
   right:0;
-  margin-top: -25px;
-
+  margin-top: -125px;
+}
+#mainHeader::after{
+  width:30%;
+  position: absolute;
+  height:150px;
+  content:'';
+  display:block;
+  background-color: #0099CC;
+  left:0;
+  transform: skewY(-20deg);
+  margin-top: -125px;
 }
 #navigationList{
   position: absolute;
@@ -286,7 +306,7 @@ a:visited{
 }
 #mainHeader a{
   letter-spacing: 2px;
-  color: #959595;
+  color: #B2B2B2;
 }
 #aboutMeList{
   list-style-type: square;
@@ -321,24 +341,21 @@ a:visited{
 
 }
 #nameHeader{
-  font-family:'Franchise';
-  letter-spacing: 7px;
-  margin-left: 20px;
-  margin-top:0px;
-  font-weight: bold;
+  /*font-family:'Franchise';*/
+  font-family: 'League-Spartan';
+  letter-spacing: 3px;
   font-size: 55px;
   position: absolute;
-  top: 10%;
-  left: 2%;
-  font-style: italic;
-
+  top: 50%;
+  left: 5%;
+color:#B2B2B2;
+  border-bottom: 4px solid #0099CC;
 }
 
 
 .project{
   height:700px;
   width:100%;
-  /*background-color: green;*/
   position: relative;
 }
 .projectDescription{
@@ -417,6 +434,7 @@ a:visited{
   height: 80px;
   background-color:#0099CC;
   transform: skewY(-3deg);
+  margin-top: -5px;
 }
 .lineLeft::after {
   content:'';
@@ -428,4 +446,179 @@ a:visited{
 }
 .blackBackground{
   background-color: #010101;
+}
+
+
+@media(max-width: 1400px){
+
+  #profilePicture{
+    height:400px;
+    width:320px;
+  }
+  #nameHeader{
+    top: 48%;
+    left: 3%;
+    font-size: 43px;
+  }
+  .lineRight::after{
+    margin-top: -7px;
+  }
+  .projectImageContainer{
+    width:450px;
+    height: 246px;
+    right: 4%;
+  }
+}
+@media(max-width: 1100px){
+
+  #profilePicture{
+    height:320px;
+    width:256px;
+  }
+  #nameHeader{
+    top: 55%;
+    left: 3%;
+    font-size: 40px;
+  }
+  .projectInfo{
+    font-size: 1.1em;
+  }
+  .projectHeader{
+    font-size:2.5em;
+  }
+  .projectImageContainer{
+    width: 400px;
+    height: 219px;
+    right: 5%;
+  }
+  .project{
+    height:500px;
+  }
+}
+@media(max-width: 970px){
+
+  #nameHeader{
+    top: 60%;
+    left: 4%;
+    font-size: 30px;
+  }
+  .projectImageContainer{
+    width: 350px;
+    height: 191px;
+    right: 5%;
+  }
+  .skillsContainer{
+    width:60%;
+  }
+}
+@media(max-width:830px){
+
+  #nameHeader{
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 40px;
+  }
+  #navigationList{
+    bottom: 7%;
+  }
+  #mainHeader a{
+    letter-spacing: 0px;
+  }
+  .projectImageContainer{
+    width: 325px;
+    height: 178px;
+    right: 3%;
+  }
+  .skillsContainer{
+    width:70%;
+  }
+}
+
+@media(max-width: 730px){
+
+  .project{
+    height:500px;
+  }
+  .projectImageContainer{
+    top:90%;
+    right:30%;
+    /*transform: translateX(-40%);*/
+  }
+  .projectDescription{
+    width:80%;
+  }
+  .lineLeft::after{
+    margin-top:50px
+  }
+  .projectInfo{
+    font-size: 1em;
+  }
+  .projectHeader{
+    font-size:2em;
+  }
+  #navigationList ul li{
+    display:block;
+  }
+  #navigationList{
+    right:3%;
+  }
+  .skillsContainer{
+    width:80%;
+  }
+  .extraSpaceContainer{
+    height:20px;
+  }
+}
+@media(max-width: 520px){
+  #mainHeader a{
+    font-size: 12px;
+  }
+  #navigationList ul li{
+    display: inline-block;
+    float:left;
+  }
+  #navigationList{
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    margin:0;
+    /*transform: skewY(0deg);*/
+  }
+  .projectImageContainer{
+    width: 275px;
+    height: 151px;
+    /*right: 18%;*/
+  }
+  .skillsContainer{
+    width: 85%;
+  }
+  .skill{
+    font-size: 0.9em;
+  }
+  #skillDesc{
+    font-size: 0.9em;
+  }
+
+}
+@media(max-width: 440px){
+  .projectImageContainer{
+    right: 18%;
+  }
+  .project{
+    height:450px;
+  }
+  .projectInfo{
+    font-size: 0.9em;
+  }
+  .projectHeader{
+    font-size:1.5em;
+  }
+  .skillsContainer{
+    width:90%;
+  }
+  .skill{
+    font-size: 0.8em;
+  }
 }
