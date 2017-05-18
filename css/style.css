@@ -56,9 +56,7 @@ a:visited{
 }
 
 .projectContainer{
-  width:100%;
-  margin:25px 0 35px 0;
-  height:250px;
+
 }
 
 .infoContainer{
@@ -95,11 +93,7 @@ a:visited{
   z-index: 3;
 }
 .individualProjectSkills{
-  width:70%;
-  position: absolute;
-  left:50%;
-  top:50%;
-  transform: translate(-50%, -50%);
+
 }
 .fullWidthContainer{
   width:100%;
@@ -354,27 +348,28 @@ color:#B2B2B2;
 
 
 .project{
-  height:700px;
   width:100%;
-  position: relative;
+  height: 400px;
+  margin-top: 50px;
 }
 .projectDescription{
-  position: absolute;
-  height:50%;
   width:50%;
-  top:50%;
-  left:5%;
-  transform: translateY(-50%);
+  height:100%;
+  vertical-align: center;
+  display:inline-block;
+  float:left;
 }
-/*.projectImageContainer{
-  position: absolute;
-  height:50%;
-  width:40%;
-  top:50%;
-  right:5%;
-  transform: translateY(-50%);
-  background-color: red;
-}*/
+.projectImageContainer{
+  width:50%;
+  display: inline-block;
+  height: 400px;
+  float:left;
+  margin: 0 auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+}
 .projectHeader{
   font-family: 'Franchise';
   letter-spacing: 2px;
@@ -382,31 +377,20 @@ color:#B2B2B2;
   text-align: center;
   font-size: 3em;
   text-shadow: 2px 2px 2px rgba(80, 80, 80, 1);
+  margin-top: 150px;
 }
 .projectInfo{
-  margin-top: 60px;
+  margin-top: 10px;
   width:90%;
   font-size: 1.3em;
   text-align: center;
 }
 .projectInfo span{
   display: block;
-  border-left:5px solid white;
+  border-left:4px solid white;
+  padding-left: 5px;
 }
-.projectImageContainer{
-  position: absolute;
-  height:300px;
-  width:547px;
-  top:50%;
-  right:1%;
-  transform: translateY(-62%);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  -webkit-box-shadow: 2px 2px 5px 0px rgba(50, 50, 50, 0.75);
-  -moz-box-shadow:    2px 2px 5px 0px rgba(50, 50, 50, 0.75);
-  box-shadow:         2px 2px 5px 0px rgba(50, 50, 50, 0.75);
-}
+
 #youNote{
   background-image: url('/resources/younote.png');
 }
@@ -424,7 +408,7 @@ color:#B2B2B2;
 
 .extraSpaceContainer {
   height:80px;
-  margin-top: -37px;
+  margin-top: -38px;
   /*background-color: blue;*/
 }
 .lineRight::after {
@@ -443,7 +427,10 @@ color:#B2B2B2;
   height: 100px;
   background-color:#010101;
   transform: skewY(3deg);
+  margin-top:150px;
+  clear:both;
 }
+
 .blackBackground{
   background-color: #010101;
 }
@@ -463,10 +450,8 @@ color:#B2B2B2;
   .lineRight::after{
     margin-top: -7px;
   }
-  .projectImageContainer{
-    width:450px;
-    height: 246px;
-    right: 4%;
+  .projectHeader{
+    margin-top: 125px;
   }
 }
 @media(max-width: 1100px){
@@ -486,14 +471,7 @@ color:#B2B2B2;
   .projectHeader{
     font-size:2.5em;
   }
-  .projectImageContainer{
-    width: 400px;
-    height: 219px;
-    right: 5%;
-  }
-  .project{
-    height:500px;
-  }
+
 }
 @media(max-width: 970px){
 
@@ -503,9 +481,9 @@ color:#B2B2B2;
     font-size: 30px;
   }
   .projectImageContainer{
-    width: 350px;
+    /*width: 350px;
     height: 191px;
-    right: 5%;
+    right: 5%;*/
   }
   .skillsContainer{
     width:60%;
@@ -525,28 +503,39 @@ color:#B2B2B2;
   #mainHeader a{
     letter-spacing: 0px;
   }
-  .projectImageContainer{
-    width: 325px;
-    height: 178px;
-    right: 3%;
+  .projectHeader{
+    margin-top: 100px;
   }
   .skillsContainer{
     width:70%;
   }
+  .long{
+    font-size: 2em;
+  }
 }
 
 @media(max-width: 730px){
-
+  #firstProject{
+    margin-top: -50px;
+  }
   .project{
-    height:500px;
+    padding-bottom: 80px;
   }
   .projectImageContainer{
-    top:90%;
-    right:30%;
-    /*transform: translateX(-40%);*/
+    display: block;
+    margin:0 auto;
+    float:none;
+    height: 225px;
+    width: 410px;
   }
   .projectDescription{
-    width:80%;
+    margin-top: 50px;
+    display: block;
+    width:90%;
+    height:auto;
+    padding :15px;
+    float:none;
+    margin: 0 auto;
   }
   .lineLeft::after{
     margin-top:50px
@@ -555,7 +544,11 @@ color:#B2B2B2;
     font-size: 1em;
   }
   .projectHeader{
-    font-size:2em;
+    font-size:2.3em;
+    margin-top: 50px;
+  }
+  .long{
+    font-size: 2.2em;
   }
   #navigationList ul li{
     display:block;
@@ -589,10 +582,12 @@ color:#B2B2B2;
     margin:0;
     /*transform: skewY(0deg);*/
   }
+  #firstProject{
+    margin-top: 0px;
+  }
   .projectImageContainer{
     width: 275px;
     height: 151px;
-    /*right: 18%;*/
   }
   .skillsContainer{
     width: 85%;
@@ -607,13 +602,11 @@ color:#B2B2B2;
     padding-top:15px;
   }
   .projectHeader{
-    width:100%;
+    margin-top: 0px;
   }
-  .projectDescription{
-    top: 30%;
-  }
-  .projectImageContainer{
-    top: 55%;
+  .project{
+    height: 300px;
+    padding: 20px 0;
   }
 
 
@@ -622,9 +615,7 @@ color:#B2B2B2;
   .projectImageContainer{
     right: 18%;
   }
-  .project{
-    height:450px;
-  }
+
   .projectInfo{
     font-size: 0.9em;
   }
