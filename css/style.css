@@ -569,6 +569,9 @@ color:#B2B2B2;
   .extraSpaceContainer{
     height:20px;
   }
+  .projectInfo{
+    margin-top:20px;
+  }
 }
 @media(max-width: 520px){
   #mainHeader a{
@@ -610,8 +613,9 @@ color:#B2B2B2;
     top: 30%;
   }
   .projectImageContainer{
-    top: 70%;
+    top: 55%;
   }
+
 
 }
 @media(max-width: 440px){
