@@ -46,18 +46,13 @@ a:visited{
 }
 
 /*portfolio page*/
-.gradient-background{
-  background: linear-gradient(to left, #708090 , #a9b2bc);
-}
+
 .contentContainer{
   width:80%;
   margin:0 auto;
 
 }
 
-.projectContainer{
-
-}
 
 .infoContainer{
   width:70%;
@@ -92,9 +87,7 @@ a:visited{
   background-color: rgba(0,0,0,0.6);
   z-index: 3;
 }
-.individualProjectSkills{
 
-}
 .fullWidthContainer{
   width:100%;
 }
@@ -556,6 +549,7 @@ color:#B2B2B2;
   #navigationList{
     right:3%;
   }
+
   .skillsContainer{
     width:80%;
   }
@@ -580,7 +574,13 @@ color:#B2B2B2;
     transform: translateX(-50%);
     display: block;
     margin:0;
-    /*transform: skewY(0deg);*/
+    width: 200px;
+    padding: 0 5px;
+  }
+  #navigationList ul{
+    width:100%;
+    padding:0;
+    margin-top: 8px;
   }
   #firstProject{
     margin-top: 0px;
